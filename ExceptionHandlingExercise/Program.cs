@@ -36,9 +36,10 @@ namespace ExceptionHandlingExercise
                     str = _char.ToString();
                     numbers.Add(int.Parse(str));
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     Console.WriteLine($"Unable to parse: {_char}");
+                    Console.WriteLine(e.Message);
                 }
 
                 // Inside your try block
